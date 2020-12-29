@@ -17,8 +17,7 @@ let timerId = null;
 
 refs.startBtn.addEventListener("click", () => {
   refs.startBtn.setAttribute('disabled', ''); 
-  refs.startBtn.removeAttribute('enabled');
-  timerId = setInterval(() => {
+    timerId = setInterval(() => {
     refs.body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)] 
   }, 1000);
 });
@@ -26,7 +25,7 @@ refs.startBtn.addEventListener("click", () => {
 refs.stopBtn.addEventListener("click", () => {
   clearInterval(timerId);
   refs.startBtn.removeAttribute('disabled', '');
-  refs.startBtn.setAttribute('enabled'); 
+  
   });
 
 const randomIntegerFromInterval = (min, max) => {
